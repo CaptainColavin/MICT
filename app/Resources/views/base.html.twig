@@ -4,13 +4,38 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}"/>
         <script src="{{ asset('js/jquery.min.js') }}"></script>
         <script src="{{ asset('js/bootstrap.js') }}"></script>
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+<!-- NavBar Menu Start -->
+      <div class="container">
+        <nav class="navbar navbar-inverse" role="navigation">
+          <div class="container-fluid">
+          <!--  <div class="navbar-header">
+              <img src="http://blog.madeincheztoi.com/wp-content/uploads/2015/08/logo_made_in_chez_toi_turquoise.png" style="height: 45px;  width: 45px; margin-right: 50px;">
+            </div> -->
+            <div class="navbar-collapse navbar-ex2-collapse">
+              <ul class="nav navbar-nav nav-tabs nav-justified">
+                <li class="active"><a href="/">Home</a></li>
+                <li class=""><a href="#">Offres</a></li>
+                <li class=""><a href="#">Photos</a></li>
+                <li class=""><a href="#">Livre d'or</a></li>
+                <li class=""><a href="#">Contact</a></li>
+                <li class=""><a href="#">La boutique</a></li>
+                <li class=""><a href="http://blog.madeincheztoi.com/">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+<!-- NavBar Menu End -->
+      <div class="container-fluid" style="background-color: green ; min-height: 45em ;">
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+      </div>
     </body>
 </html>

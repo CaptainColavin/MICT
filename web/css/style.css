@@ -1,0 +1,13 @@
+h1{
+  font-family: "open sans";
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
+}
+h2{
+  font-family: "open sans";
+  color: white;
+}
+.centered{
+  text-align:center;
+}
