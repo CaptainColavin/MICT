@@ -1,3 +1,7 @@
+body{
+  background: url(../images/MICT/background/bgstar.png);
+}
+
 h1{
   font-family: "open sans";
   font-size: 50px;
