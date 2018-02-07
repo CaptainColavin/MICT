@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Livre d'or :</h1>
+        
+    
+            <a href="{{ path('livreor_new') }}">Cliquez ici pour ajouter votre commentaire !</a>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Pseudo :</th>
+                <th scope="col">Message :</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for livreOr in livreOrs %}
+            <tr classe="table-active">
+                
+                <<th scope="row">{{ livreOr.pseudo }}</th>
+                <<th scope="row">{{ livreOr.message }}</th>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}
