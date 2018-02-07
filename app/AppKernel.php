@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new frontBundle\frontBundle(),
             new BackBundle\BackBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+            new Ensepar\Html2pdfBundle\EnseparHtml2pdfBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
