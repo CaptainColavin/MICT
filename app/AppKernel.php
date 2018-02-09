@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new BackBundle\BackBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new Ensepar\Html2pdfBundle\EnseparHtml2pdfBundle(),
+            new EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle(),
            
         ];
 
