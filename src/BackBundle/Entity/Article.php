@@ -69,7 +69,13 @@ class Article
      * @ORM\Column(name="categorie", type="string", length=255)
      */
     private $categorie;
-
+    
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="datetime")
+     */
+    private $date;
 
     /**
      * Get id
@@ -247,6 +253,30 @@ class Article
     public function getCategorie()
     {
         return $this->categorie;
+    }
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     *
+     * @return Article
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
     }
 }
 

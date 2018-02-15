@@ -41,7 +41,7 @@ class Contenu
      * @ORM\Column(name="titre", type="string", length=255)
      */
     private $titre;
-
+    
 
     /**
      * Get id

@@ -157,8 +157,10 @@ fos_user:
 easy_admin:
     entities:
         - AppBundle\Entity\User
+        - BackBundle\Entity\Article
+        - BackBundle\Entity\Ateliers
+        - BackBundle\Entity\Contenu
+        - BackBundle\Entity\Gallerie 
         - BackBundle\Entity\LivreOr
         - BackBundle\Entity\News
-        - BackBundle\Entity\Article
-        - BackBundle\Entity\Gallerie
-        - BackBundle\Entity\Contenu
+

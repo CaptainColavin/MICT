@@ -36,13 +36,6 @@ class News
     private $description;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="resume", type="string", length=255)
-     */
-    private $resume;
-
-    /**
      * @var \DateTime
      *
      * @ORM\Column(name="dateDebut", type="datetime")
@@ -59,17 +52,23 @@ class News
     /**
      * @var string
      *
-     * @ORM\Column(name="a_afficher", type="string", length=255)
+     * @ORM\Column(name="lien", type="string", length=255, nullable=true)
      */
-    private $aAfficher;
-
+    private $lien;
+    
     /**
-     * @var string
+     * @var bool
      *
-     * @ORM\Column(name="recurrence", type="string", length=255)
+     * @ORM\Column(name="recurrence", type="boolean")
      */
     private $recurrence;
-
+    
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="newsPrioritaire", type="boolean", nullable=true)
+     */
+    private $newsPrioritaire;
 
     /**
      * Get id
@@ -129,29 +128,7 @@ class News
         return $this->description;
     }
 
-    /**
-     * Set resume
-     *
-     * @param string $resume
-     *
-     * @return News
-     */
-    public function setResume($resume)
-    {
-        $this->resume = $resume;
-
-        return $this;
-    }
-
-    /**
-     * Get resume
-     *
-     * @return string
-     */
-    public function getResume()
-    {
-        return $this->resume;
-    }
+    
 
     /**
      * Set dateDebut
@@ -200,35 +177,34 @@ class News
     {
         return $this->dateFin;
     }
-
     /**
-     * Set aAfficher
+     * Set lien
      *
-     * @param string $aAfficher
+     * @param string $lien
      *
      * @return News
      */
-    public function setAAfficher($aAfficher)
+    public function setLien($lien)
     {
-        $this->aAfficher = $aAfficher;
+        $this->lien = $lien;
 
         return $this;
     }
 
     /**
-     * Get aAfficher
+     * Get lien
      *
      * @return string
      */
-    public function getAAfficher()
+    public function getLien()
     {
-        return $this->aAfficher;
+        return $this->lien;
     }
 
     /**
      * Set recurrence
      *
-     * @param string $recurrence
+     * @param boolean $recurrence
      *
      * @return News
      */
@@ -242,11 +218,36 @@ class News
     /**
      * Get recurrence
      *
-     * @return string
+     * @return bool
      */
     public function getRecurrence()
     {
         return $this->recurrence;
     }
+
+    /**
+     * Set newsPrioritaire
+     *
+     * @param boolean $newsPrioritaire
+     *
+     * @return News
+     */
+    public function setNewsPrioritaire($newsPrioritaire)
+    {
+        $this->newsPrioritaire = $newsPrioritaire;
+
+        return $this;
+    }
+
+    /**
+     * Get newsPrioritaire
+     *
+     * @return bool
+     */
+    public function getNewsPrioritaire()
+    {
+        return $this->newsPrioritaire;
+    }
+
 }
 

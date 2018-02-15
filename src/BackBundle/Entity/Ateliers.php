@@ -48,7 +48,20 @@ class Ateliers
      * @ORM\Column(name="date", type="datetime")
      */
     private $date;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="thème", type="string", length=255)
+     */
+    private $theme;
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="NbPersonnesMax", type="integer", nullable=true)
+     */
+    private $NbPersonnesMax;
 
     /**
      * Get id
@@ -154,6 +167,52 @@ class Ateliers
     public function getDate()
     {
         return $this->date;
+    }
+    /**
+     * Set NbPersonnesMax
+     *
+     * @param integer $NbPersonnesMax
+     *
+     * @return Ateliers
+     */
+    public function setNbPersonnesMax($NbPersonnesMax)
+    {
+        $this->nbPersonnesMax = $nbPersonnesMax;
+
+        return $this;
+    }
+
+    /**
+     * Get NbPersonnesMax
+     *
+     * @return int
+     */
+    public function getNbPersonnesMax()
+    {
+        return $this->nbPersonnesMax;
+    }
+    /**
+     * Set theme
+     *
+     * @param string $theme
+     *
+     * @return Ateliers
+     */
+    public function setTheme($theme)
+    {
+        $this->theme = $theme;
+
+        return $this;
+    }
+
+    /**
+     * Get theme
+     *
+     * @return string
+     */
+    public function getTheme()
+    {
+        return $this->theme;
     }
 }
 
