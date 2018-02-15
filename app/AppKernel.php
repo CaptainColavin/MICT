@@ -24,7 +24,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new Ensepar\Html2pdfBundle\EnseparHtml2pdfBundle(),
             new EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle(),
-           
+
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
