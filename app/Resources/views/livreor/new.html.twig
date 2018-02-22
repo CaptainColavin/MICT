@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
+ <div class="container">
+  <div class="row">   
     <h1>Mon commentaire :</h1>
 
     {{ form_start(form) }}
@@ -16,4 +19,6 @@
             <button><a href="{{ path('livreor_index') }}">Retour</a></button>
         </li>
     </ul>
+</div>
+</div>
 {% endblock %}
