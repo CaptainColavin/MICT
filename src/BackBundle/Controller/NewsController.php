@@ -19,7 +19,7 @@ public function indexAction()
 
     $news = $em->getRepository('BackBundle:News')->findAll();
 
-    return $this->render('livreor/index.html.twig', array(
-        'livreOrs' => $livreOrs,
+    return $this->render('base.html.twig', array(
+        'news' => $news,
     ));
 }
