@@ -256,13 +256,10 @@ class <proxyShortClassName> extends \<className> implements \<baseProxyInterface
      * @param \Doctrine\Common\Persistence\Mapping\ClassMetadata $class    Metadata for the original class.
      * @param string|bool                                        $fileName Filename (full path) for the generated class. If none is given, eval() is used.
      *
-     * @throws InvalidArgumentException
      * @throws UnexpectedValueException
      */
     public function generateProxyClass(ClassMetadata $class, $fileName = false)
     {
-        $this->verifyClassCanBeProxied($class);
-
         preg_match_all('(<([a-zA-Z]+)>)', $this->proxyClassTemplate, $placeholderMatches);
 
         $placeholderMatches = array_combine($placeholderMatches[0], $placeholderMatches[1]);
@@ -307,22 +304,6 @@ class <proxyShortClassName> extends \<className> implements \<baseProxyInterface
         file_put_contents($tmpFileName, $proxyCode);
         @chmod($tmpFileName, 0664);
         rename($tmpFileName, $fileName);
-    }
-
-    /**
-     * @param ClassMetadata $class
-     *
-     * @throws InvalidArgumentException
-     */
-    private function verifyClassCanBeProxied(ClassMetadata $class)
-    {
-        if ($class->getReflectionClass()->isFinal()) {
-            throw InvalidArgumentException::classMustNotBeFinal($class->getName());
-        }
-
-        if ($class->getReflectionClass()->isAbstract()) {
-            throw InvalidArgumentException::classMustNotBeAbstract($class->getName());
-        }
     }
 
     /**
@@ -796,7 +777,7 @@ EOT;
                 $methods .= '&';
             }
 
-            $methods .= $name . '(' . $this->buildParametersString($method->getParameters()) . ')';
+            $methods .= $name . '(' . $this->buildParametersString($class, $method, $method->getParameters()) . ')';
             $methods .= $this->getMethodReturnType($method);
             $methods .= "\n" . '    {' . "\n";
 
@@ -906,11 +887,13 @@ EOT;
     }
 
     /**
+     * @param ClassMetadata          $class
+     * @param \ReflectionMethod      $method
      * @param \ReflectionParameter[] $parameters
      *
      * @return string
      */
-    private function buildParametersString(array $parameters)
+    private function buildParametersString(ClassMetadata $class, \ReflectionMethod $method, array $parameters)
     {
         $parameterDefinitions = [];
 
@@ -918,7 +901,7 @@ EOT;
         foreach ($parameters as $param) {
             $parameterDefinition = '';
 
-            if ($parameterType = $this->getParameterType($param)) {
+            if ($parameterType = $this->getParameterType($class, $method, $param)) {
                 $parameterDefinition .= $parameterType . ' ';
             }
 
@@ -926,10 +909,11 @@ EOT;
                 $parameterDefinition .= '&';
             }
 
-            if ($param->isVariadic()) {
+            if (method_exists($param, 'isVariadic') && $param->isVariadic()) {
                 $parameterDefinition .= '...';
             }
 
+            $parameters[]     = '$' . $param->getName();
             $parameterDefinition .= '$' . $param->getName();
 
             if ($param->isDefaultValueAvailable()) {
@@ -949,9 +933,8 @@ EOT;
      *
      * @return string|null
      */
-    private function getParameterType(\ReflectionParameter $parameter)
+    private function getParameterType(ClassMetadata $class, \ReflectionMethod $method, \ReflectionParameter $parameter)
     {
-<<<<<<< HEAD
 
         // We need to pick the type hint class too
         if ($parameter->isArray()) {
@@ -982,13 +965,6 @@ EOT;
         }
 
         return null;
-=======
-        if ( ! $parameter->hasType()) {
-            return null;
-        }
-
-        return $this->formatType($parameter->getType(), $parameter->getDeclaringFunction(), $parameter);
->>>>>>> 5ffdd5b636ece0fb3d756ffbc6d43c3c2978a365
     }
 
     /**
@@ -1017,7 +993,7 @@ EOT;
             function (\ReflectionParameter $parameter) {
                 $name = '';
 
-                if ($parameter->isVariadic()) {
+                if (method_exists($parameter, 'isVariadic') && $parameter->isVariadic()) {
                     $name .= '...';
                 }
 
@@ -1030,58 +1006,23 @@ EOT;
     }
 
     /**
-     * @param \ReflectionMethod $method
+     * @Param \ReflectionMethod $method
      *
      * @return string
      */
     private function getMethodReturnType(\ReflectionMethod $method)
     {
-<<<<<<< HEAD
         if (! (method_exists($method, 'hasReturnType') && $method->hasReturnType())) {
-=======
-        if ( ! $method->hasReturnType()) {
->>>>>>> 5ffdd5b636ece0fb3d756ffbc6d43c3c2978a365
             return '';
         }
 
         $returnType = $method->getReturnType();
 
-<<<<<<< HEAD
         if ($returnType->isBuiltin()) {
             return ': ' . $returnType;
         }
 
         $nameLower = strtolower((string) $returnType);
-=======
-    /**
-     * @param \ReflectionMethod $method
-     *
-     * @return bool
-     */
-    private function shouldProxiedMethodReturn(\ReflectionMethod $method)
-    {
-        if ( ! $method->hasReturnType()) {
-            return true;
-        }
-
-        return 'void' !== strtolower($this->formatType($method->getReturnType(), $method));
-    }
-
-    /**
-     * @param \ReflectionType $type
-     * @param \ReflectionMethod $method
-     * @param \ReflectionParameter|null $parameter
-     *
-     * @return string
-     */
-    private function formatType(
-        \ReflectionType $type,
-        \ReflectionMethod $method,
-        \ReflectionParameter $parameter = null
-    ) {
-        $name = (string) $type;
-        $nameLower = strtolower($name);
->>>>>>> 5ffdd5b636ece0fb3d756ffbc6d43c3c2978a365
 
         if ('self' === $nameLower) {
             return ': \\' . $method->getDeclaringClass()->getName();

@@ -104,7 +104,6 @@ final class Debug
             if (is_array($var)) {
                 $return = [];
 
-<<<<<<< HEAD
                 foreach ($var as $k => $v) {
                     $return[$k] = self::export($v, $maxDepth - 1);
                 }
@@ -140,43 +139,6 @@ final class Debug
         } else {
             $return = is_object($var) ? get_class($var)
                 : (is_array($var) ? 'Array(' . count($var) . ')' : $var);
-=======
-        $return->__CLASS__ = ClassUtils::getClass($var);
-
-        if ($var instanceof Proxy) {
-            $return->__IS_PROXY__ = true;
-            $return->__PROXY_INITIALIZED__ = $var->__isInitialized();
-        }
-
-        if ($var instanceof \ArrayObject || $var instanceof \ArrayIterator) {
-            $return->__STORAGE__ = self::export($var->getArrayCopy(), $maxDepth - 1);
-        }
-
-        return self::fillReturnWithClassAttributes($var, $return, $maxDepth);
-    }
-
-    /**
-     * Fill the $return variable with class attributes
-     * Based on obj2array function from {@see http://php.net/manual/en/function.get-object-vars.php#47075}
-     *
-     * @param object   $var
-     * @param \stdClass $return
-     * @param int      $maxDepth
-     *
-     * @return mixed
-     */
-    private static function fillReturnWithClassAttributes($var, \stdClass $return, $maxDepth)
-    {
-        $clone = (array) $var;
-
-        foreach (array_keys($clone) as $key) {
-            $aux = explode("\0", $key);
-            $name = end($aux);
-            if ($aux[0] === '') {
-                $name.= ':' . ($aux[1] === '*' ? 'protected' : $aux[1].':private');
-            }
-            $return->$name = self::export($clone[$key], $maxDepth - 1);;
->>>>>>> 5ffdd5b636ece0fb3d756ffbc6d43c3c2978a365
         }
 
         return $return;

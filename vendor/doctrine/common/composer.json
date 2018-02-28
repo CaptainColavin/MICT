@@ -13,11 +13,7 @@
         {"name": "Johannes Schmitt", "email": "schmittjoh@gmail.com"}
     ],
     "require": {
-<<<<<<< HEAD
         "php": "~5.5|~7.0",
-=======
-        "php": "~7.1",
->>>>>>> 5ffdd5b636ece0fb3d756ffbc6d43c3c2978a365
         "doctrine/inflector": "1.*",
         "doctrine/cache": "1.*",
         "doctrine/collections": "1.*",
@@ -25,25 +21,16 @@
         "doctrine/annotations": "1.*"
     },
     "require-dev": {
-<<<<<<< HEAD
         "phpunit/phpunit": "~4.8|~5.0"
-=======
-        "phpunit/phpunit": "^5.7"
->>>>>>> 5ffdd5b636ece0fb3d756ffbc6d43c3c2978a365
     },
     "autoload": {
         "psr-4": {
             "Doctrine\\Common\\": "lib/Doctrine/Common"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Doctrine\\Tests\\": "tests/Doctrine/Tests"
-        }
-    },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.8.x-dev"
+            "dev-master": "2.7.x-dev"
         }
     }
 }

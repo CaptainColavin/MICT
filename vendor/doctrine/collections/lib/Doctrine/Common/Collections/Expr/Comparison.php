@@ -27,7 +27,6 @@ namespace Doctrine\Common\Collections\Expr;
  */
 class Comparison implements Expression
 {
-<<<<<<< HEAD
     const EQ        = '=';
     const NEQ       = '<>';
     const LT        = '<';
@@ -38,21 +37,6 @@ class Comparison implements Expression
     const IN        = 'IN';
     const NIN       = 'NIN';
     const CONTAINS  = 'CONTAINS';
-=======
-    const EQ           = '=';
-    const NEQ          = '<>';
-    const LT           = '<';
-    const LTE          = '<=';
-    const GT           = '>';
-    const GTE          = '>=';
-    const IS           = '='; // no difference with EQ
-    const IN           = 'IN';
-    const NIN          = 'NIN';
-    const CONTAINS     = 'CONTAINS';
-    const MEMBER_OF    = 'MEMBER_OF';
-    const STARTS_WITH  = 'STARTS_WITH';
-    const ENDS_WITH    = 'ENDS_WITH';
->>>>>>> 5ffdd5b636ece0fb3d756ffbc6d43c3c2978a365
 
     /**
      * @var string
