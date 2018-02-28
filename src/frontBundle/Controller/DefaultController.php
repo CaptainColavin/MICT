@@ -35,7 +35,7 @@ class DefaultController extends Controller
      * @Route("/livredor")
      */
     public function book()
-    {
+    {   
         return $this->render('frontBundle:Default:goldenbook.html.twig');
     }
 
