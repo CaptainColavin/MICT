@@ -100,6 +100,8 @@ class AnnotationReader implements Reader
         'package_version' => true,
         // PlantUML
         'startuml' => true, 'enduml' => true,
+        // Symfony 3.3 Cache Adapter
+        'experimental' => true
     );
 
     /**
@@ -151,6 +153,13 @@ class AnnotationReader implements Reader
      * Constructor.
      *
      * Initializes a new AnnotationReader.
+<<<<<<< HEAD
+=======
+     *
+     * @param DocParser $parser
+     *
+     * @throws AnnotationException
+>>>>>>> 5ffdd5b636ece0fb3d756ffbc6d43c3c2978a365
      */
     public function __construct()
     {

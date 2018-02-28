@@ -45,7 +45,7 @@ class ArrayCollection implements Collection, Selectable
      *
      * @param array $elements
      */
-    public function __construct(array $elements = array())
+    public function __construct(array $elements = [])
     {
         $this->elements = $elements;
     }
@@ -157,7 +157,8 @@ class ArrayCollection implements Collection, Selectable
     public function offsetSet($offset, $value)
     {
         if ( ! isset($offset)) {
-            return $this->add($value);
+            $this->add($value);
+            return;
         }
 
         $this->set($offset, $value);
@@ -170,7 +171,7 @@ class ArrayCollection implements Collection, Selectable
      */
     public function offsetUnset($offset)
     {
-        return $this->remove($offset);
+        $this->remove($offset);
     }
 
     /**
@@ -216,7 +217,7 @@ class ArrayCollection implements Collection, Selectable
      */
     public function get($key)
     {
-        return isset($this->elements[$key]) ? $this->elements[$key] : null;
+        return $this->elements[$key] ?? null;
     }
 
     /**
@@ -281,6 +282,8 @@ class ArrayCollection implements Collection, Selectable
 
     /**
      * {@inheritDoc}
+     *
+     * @return static
      */
     public function map(Closure $func)
     {
@@ -289,6 +292,8 @@ class ArrayCollection implements Collection, Selectable
 
     /**
      * {@inheritDoc}
+     *
+     * @return static
      */
     public function filter(Closure $p)
     {
@@ -314,7 +319,7 @@ class ArrayCollection implements Collection, Selectable
      */
     public function partition(Closure $p)
     {
-        $matches = $noMatches = array();
+        $matches = $noMatches = [];
 
         foreach ($this->elements as $key => $element) {
             if ($p($key, $element)) {
@@ -324,7 +329,11 @@ class ArrayCollection implements Collection, Selectable
             }
         }
 
+<<<<<<< HEAD
         return array(new static($matches), new static($noMatches));
+=======
+        return [$this->createFrom($matches), $this->createFrom($noMatches)];
+>>>>>>> 5ffdd5b636ece0fb3d756ffbc6d43c3c2978a365
     }
 
     /**
@@ -342,7 +351,7 @@ class ArrayCollection implements Collection, Selectable
      */
     public function clear()
     {
-        $this->elements = array();
+        $this->elements = [];
     }
 
     /**
