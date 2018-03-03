@@ -145,7 +145,7 @@ assetic:
                 - "%kernel.root_dir%/../vendor/twbs/bootstrap/fonts/glyphicons-halflings-regular.woff"
 
             output: "fonts/glyphicons-halflings-regular.woff"
-            
+
 # app/config/config.yml
 fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
@@ -160,7 +160,6 @@ easy_admin:
         - BackBundle\Entity\Article
         - BackBundle\Entity\Ateliers
         - BackBundle\Entity\Contenu
-        - BackBundle\Entity\Gallerie 
+        - BackBundle\Entity\Gallerie
         - BackBundle\Entity\LivreOr
         - BackBundle\Entity\News
-
