@@ -1,4 +1,105 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <h1>Inserer le contenu de la page contact ici</h1>
+	
+<div class="container">
+
+
+      <div class="jumbotron">
+        <h1>Je contacte Made in chez toi !</h1>
+        <p class="lead">Besoin d'en savoir plus sur les sessions Made in chez toi ?</p>
+		<p>Besoin d'un devis pour un CE ? une école ?
+		une entreprise ?</p>
+		<p>Un super-goûter-d'anniversaire-inoubliable ?</p>
+		<p><a class="btn btn-info" href="mailto:contact@madeincheztoi.com?subject=Renseignements" role="button">Faire une demande de renseignements</a></p>
+		<p>Tu veux réserver ton atelier, ou rejoindre un atelier existant ?</p>
+        
+        <p><a class="btn btn-success" href="#" type="button" data-toggle="modal" data-target="#modalReservation">Reserver un atelier !</a></p>
+      </div>
+                
+
+
+
+    </div>
+
+
+
+<div class="modal fade" id="modalReservation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Je réserve mon atelier !</h4>
+      </div>
+      <div class="modal-body">
+        <p>Ça y est, tu as choisi le thème qui te branche pour ton prochain atelier ?</p>
+		<p>À moins que tu n'aies simplement envie de rejoindre un atelier ou de réserver un cours particulier ?</p>
+		<p>Tu vas être recontacté sous peu pour vérifier les disponibilités pour ton atelier ou ton cours, et pour fixer tous les petits détails techniques.</p>
+              <form class="form" id="form1" action="email.php" method="post">
+                  <input name="nom" type="text" class="champ full" id="nom" placeholder="Nom et Prénom" />
+                  <input name="email" type="email" class="champ full" id="email" placeholder="Email" />
+                  <input name="tel" type="tel" class="champ full" id="tel" placeholder="Téléphone (optionnel)" />
+                  <input name="ville" type="text" class="champ full" id="ville" placeholder="Ville" />
+		<hr />
+		  <input type="radio" name="question" value="heberger" id="heberger" <?php unset($ref_theme); if ($requete == "heberger") { echo "checked"; } if (preg_match('/^theme([0-9]+)$/',$requete,$ref_theme)) { echo "checked"; } ?>>Je veux héberger un atelier chez moi !<br />
+		  <input type="radio" name="question" value="participer" id="participer" <?php if (preg_match('/^atelier([0-9]+)$/',$requete,$ref_atelier)) { echo "checked"; } ?>>Je veux rejoindre un atelier existant.<br />
+		  <input type="radio" name="question" value="particulier" id="particulier" <?php if ($requete == "cp") { echo "checked"; } ?>>Je veux avoir des cours particuliers !<br />
+		<hr />
+		<div class="sf-heb">
+		  <label for="date">Date souhaitée : </label>
+		  <input name="date" type="date" class="champ" id="date" /><br />
+		  <label for="time">Heure souhaitée : </label>
+                  <input name="time" type="text" class="champ" id="time" placeholder="9h30"/><br />
+		  <label for="theme">Thème de l'atelier : </label>
+                  <select name="theme" id="theme_atelier_sel">
+<?php
+	$themes_list = array('','Initiation à la couture','Vêtements bébé','Vêtements enfant','Accessoires bébé / enfant','Vêtements femme','Vêtements homme','Pour chez toi','Recyclage et détournement','Techniques de couture','Ateliers événements','Sacs, chapeaux et accessoires');
+	if (isset($ref_theme[1])) { 
+		for($i=1;$i<=11;$i++) {
+			echo "<option value=\"theme" . $i . "\"";
+			if ($ref_theme[1] == $i) { echo " selected"; }
+			echo ">" . $themes_list[$i] . "</option>\r\n";
+		}
+	} else {
+		for($i=1;$i<=11;$i++) {
+			echo "<option value=\"theme" . $i . "\">" . $themes_list[$i] . "</option>\r\n";
+		}
+	}
+		
+?>
+		  </select>
+		  <hr />
+		</div>
+		<div class="sf-rj">
+		  <label for="ref">Référence de l'atelier souhaité : </label>
+                  <input name="ref" type="text" class="champ" id="ref" value="<?php echo $ref_atelier[1];?>"/> 
+		  <hr />
+		</div>
+		<div class="sf-cp">
+		  <label for="date_cp">Date souhaitée : </label>
+		  <input name="date_cp" type="date" class="champ" id="date_cp" /><br />
+		  <label for="time_cp">Heure souhaitée : </label>
+                  <input name="time_cp" type="text" class="champ" id="time_cp" placeholder="9h30" /> 
+		  <hr />
+		</div>
+                  <textarea name="message" rows=5 class="champ full" id="message" placeholder="Des précisions à apporter ?"></textarea>
+                <input type="submit" value="Je réserve !" class="submit"/>
+              </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+	
 {% endblock %}
