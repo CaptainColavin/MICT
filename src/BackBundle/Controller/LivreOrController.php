@@ -24,7 +24,11 @@ class LivreOrController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $livreOrs = $em->getRepository('BackBundle:LivreOr')->findAll();
+        $livreOrs = $em->getRepository('BackBundle:LivreOr')->findBy(
+            array(),
+            array('id' =>'desc'),
+            5,
+            0);
 
         return $this->render('livreor/index.html.twig', array(
             'livreOrs' => $livreOrs,

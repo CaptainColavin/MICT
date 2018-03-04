@@ -9,5 +9,6 @@ namespace BackBundle\Repository;
  * repository methods below.
  */
 class LivreOrRepository extends \Doctrine\ORM\EntityRepository
-{
+{ 
+	
 }
