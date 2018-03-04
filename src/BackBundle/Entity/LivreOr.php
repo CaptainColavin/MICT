@@ -35,6 +35,12 @@ class LivreOr
      */
     private $mail;
 
+    /** @var bool
+     *
+     * @ORM\Column(name="afficher", type="boolean", nullable=true)
+     */
+    private $afficher;
+
     /**
      * @var string
      *
@@ -152,6 +158,29 @@ class LivreOr
     public function getDate()
     {
         return $this->date;
+    }
+    /**
+     * Set afficher
+     *
+     * @param boolean $afficher
+     *
+     * @return LivreOr
+     */
+    public function setAfficher($afficher)
+    {
+        $this->afficher = $afficher;
+
+        return $this;
+    }
+
+    /**
+     * Get afficher
+     *
+     * @return bool
+     */
+    public function getAfficher()
+    {
+        return $this->afficher;
     }
 }
 

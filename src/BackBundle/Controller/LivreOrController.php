@@ -25,7 +25,7 @@ class LivreOrController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $livreOrs = $em->getRepository('BackBundle:LivreOr')->findBy(
-            array(),
+            array('afficher' => '1'),
             array('id' =>'desc'),
             5,
             0);
