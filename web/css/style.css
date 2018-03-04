@@ -1,12 +1,15 @@
 body{
   background: url(../images/MICT/background/MictBG.png);
 }
+li{
+  list-style-type: none;
+}
+
 
 h1{
   font-family: "open sans";
   font-size: 50px;
   font-weight: 500;
-  color: white;
 }
 h2{
   font-family: "open sans";
@@ -95,4 +98,19 @@ h2{
 
 .lightBlueButton:hover {
   background-color: #68a6c7;
+}
+
+#myCarousel img{
+  max-height: 450px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.indexList .elem{
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.indexList .elem::before{
+ content:url(../images/MICT/decoration/li1.png);
 }
