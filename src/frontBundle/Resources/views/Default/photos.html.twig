@@ -1,4 +1,104 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <h1>Inserer le contenu de la page photo ici</h1>
+
+
+<div class="container">
+<table>
+<tr>
+  <div class="panel-group" id="accordion">
+    
+   <td>
+   <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Les créations des membres</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+    <div class="tz-gallery">
+
+        <div class="row">
+            <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/1.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/1.jpg') }}">
+                </a>
+            </div>
+            <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/2.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/2.jpg') }}">
+                </a>
+            </div>
+        </div>
+    </div>
+        </div>
+      </div>
+    </div>
+    </td>
+    <td>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Ambiances</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+    <div class="tz-gallery">
+
+        <div class="row">
+            <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/1.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/1.jpg') }}">
+                </a>
+            </div>
+            <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/2.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/2.jpg') }}">
+                </a>
+            </div>
+        </div>
+    </div>
+
+        </div>
+      </div>
+    </div>
+    </td>
+    <td>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Partenaires</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">
+        	    <div class="tz-gallery">
+
+        <div class="row">
+            <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/1.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/1.jpg') }}">
+                </a>
+            </div>
+            <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/2.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/2.jpg') }}">
+                </a>
+            </div>
+        </div>
+    </div>
+        	
+        </div>
+      </div>
+    </div>
+    </td>
+  </div>
+  
+</tr>
+</table>
+</div>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
 {% endblock %}
