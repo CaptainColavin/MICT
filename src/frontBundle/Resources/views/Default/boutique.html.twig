@@ -1,86 +1,154 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <div class="container" style="background-color:rgba(255, 255, 255, 0.7); text-align:center; padding-left: 100px; padding-right: 30px;">
-      <h2 style="color: #035682">Choisis le thême de ton atelier !</h2>
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
+<div class="container" style="background-color:rgba(255, 255, 255, 0.7); text-align:center; ">
+
+<div class="col-md-9">
+    <div class="col-md-12">
+        <h2 style="color: #a700ab">Choisis le thême de ton atelier !</h2>
+
         <p style="text-align: left;">Clique sur chaque thème pour découvrir ses secrets :
-          projets proposés, exemples de réalisations,
-          niveaux de difficulté, et réserve celui qui te plaît le plus !
-          Tu retrouveras certains projets dans plusieurs catégories.
-          Par exemple les vide-poches sont à la fois des accessoires pour chez toi et des projets initiation !</p>
-        </div>
-        <div class="col-md-2"></div>
-      <div class="col-md-5 blueBorderContainer" style="margin-left:20px; margin-right:20px; text-align: left">
-        <div class="col-md-6">
+            projets proposés, exempl3s de réalisations,
+            niveaux de difficulté, et réserve celui qui te plaît le plus !
+            Tu retrouveras certains projets dans plusieurs catégories.
+            Par exemple les vide-poches sont à la fois des accessoires pour chez toi et des projets initiation !</p>
+    </div>
+
+    <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+        <div class="col-md-3">
           <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
-          <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
+          <button type="button" class="darkBlueButton" style="margin-bottom: 5px;" id="showModal">Achat rapide</button><br/>
           <button type="button" class="lightBlueButton">Achat presonnalisé</button>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <p>Initiation à la couture</p>
           <p>DESCRIPTION</p>
         </div>
       </div>
 
-      <div class="col-md-5 blueBorderContainer" style="margin-left: 20px; margin-right:20px; text-align: left;">
-        <div class="col-md-6">
+
+    <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+        <div class="col-md-3">
           <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
           <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
           <button type="button" class="lightBlueButton">Achat presonnalisé</button>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <p>Vêtements Bébé</p>
           <p>DESCRIPTION</p>
         </div>
       </div>
 
-      <div class="col-md-5 blueBorderContainer" style="margin-left: 20px; margin-right:20px; text-align: left;">
-        <div class="col-md-6">
+    <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+        <div class="col-md-3">
           <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
           <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
           <button type="button" class="lightBlueButton">Achat presonnalisé</button>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <p>Vêtements Enfant</p>
           <p>DESCRIPTION</p>
         </div>
       </div>
 
-      <div class="col-md-5 blueBorderContainer" style="margin-left: 20px; margin-right:20px; text-align: left;">
-        <div class="col-md-6">
+    <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+        <div class="col-md-3">
           <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
           <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
           <button type="button" class="lightBlueButton">Achat presonnalisé</button>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <p>Accessoires Bébé / Enfant</p>
           <p>DESCRIPTION</p>
         </div>
       </div>
 
-      <div class="col-md-5 blueBorderContainer" style="margin-left: 20px; margin-right:20px; text-align: left;">
-        <div class="col-md-6">
+    <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+        <div class="col-md-3">
           <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
           <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
           <button type="button" class="lightBlueButton">Achat presonnalisé</button>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <p>Vêtements Femme</p>
           <p>DESCRIPTION</p>
         </div>
       </div>
 
-      <div class="col-md-5 blueBorderContainer" style="margin-left: 20px; margin-right:20px; text-align: left;">
-        <div class="col-md-6">
+    <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+        <div class="col-md-3">
           <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
           <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
           <button type="button" class="lightBlueButton">Achat presonnalisé</button>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <p>Vêtements Homme</p>
           <p>DESCRIPTION</p>
         </div>
       </div>
-    </div>
+  </div>
+
+  <div class="col-md-3" style="text-align: left">
+      <h4 style="text-align: center; margin-top:80px;">Made in...</h4>
+
+      <div class="purpleBorderContainerSide">
+            <h4 style="color: #a700ab; text-align: center">...Chez les autres</h4>
+            <p>Tu es seul(e), et tu veux rejoindre un atelier déjà organisé par quelqu'un d'autre ?</p>
+            <p>Tu as envie de rencontrer du monde en passant des moments sympas, tout en apprenant quelque chose d'utile ?</p>
+            <p>Tu as envie de participer à un atelier sans avoir à l'organiser ?</p>
+            <p>Alors rejoins un atelier déjà planifié, s'il est ouvert au public et s'il y reste des places !</p>
+            <hr>
+            <p>Les prochains ateliers couture Made in chez toi pour lesquels il reste des places :</p>
+            <p style="text-align: center">Mercredi 12 octobre 13h - 16h Paris 17° Atelier sac Tamagushi</p>
+            <div style="width: auto">
+                <button type="button" class="darkBlueButton" style="margin:0 40px 0 40px">Je rejoins cet atelier</button>
+            </div>
+      </div>
+
+      <div class="purpleBorderContainerSide">
+          <h4 style="color: #a700ab; text-align: center">...Chez toi</h4>
+          <p>C'est décidé, tu veux un atelier chez toi !</p>
+          <p>Il ne te reste plus qu'à réserver en cliquant sur le bouton ci-dessous...</p>
+          <p>À très bientôt, chez toi !</p>
+          <button type="button" class="darkBlueButton" style="margin:0 75px 0 75px">Je réserve</button>
+      </div>
+
+      <div class="purpleBorderContainerSide">
+          <h4 style="color: #a700ab; text-align: center">...En ville</h4>
+          <p>Retrouve Made in chez toi lors de ses prochains événements !</p>
+          <hr>
+          <p style="text-align: center">24 septembre 2016 de 10h à 19h Mondial Tissus Montigny les Cormeilles</p>
+          <p style="text-align: center">Viens rencontrer Made in chez toi et discuter de tes envies couture pendant cette journée de démonstration !</p>
+          <button type="button" class="darkBlueButton" style="margin:0 75px 0 75px">Je réserve</button>
+      </div>
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+</div>
+
+<script>
+    var modal = document.getElementById('myModal');
+
+    var btn = document.getElementById("showModal");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 {% endblock %}

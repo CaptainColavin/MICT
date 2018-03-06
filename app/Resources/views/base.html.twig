@@ -18,26 +18,24 @@
     <body>
 <!-- NavBar Menu Start -->
       <div class="container">
-        <nav class="navbar navbar-inverse" role="navigation">
+          
+        <nav class="navbar" role="navigation">
           <div class="container-fluid">
           <!--  <div class="navbar-header">
               <img src="http://blog.madeincheztoi.com/wp-content/uploads/2015/08/logo_made_in_chez_toi_turquoise.png" style="height: 45px;  width: 45px; margin-right: 50px;">
             </div> -->
-            <div class="navbar-collapse navbar-ex2-collapse">
-              <ul class="nav navbar-nav nav-tabs nav-justified">
-                <li class="active"><a href="/">Home</a></li>
-                <li class=""><a class='navigate' href="/offres">Offres</a></li>
-                <li class=""><a href="/photos">Photos</a></li>
-                <li class=""><a href="/livreor">Livre d'or</a></li>
-                <li class=""><a href="/contact">Contact</a></li>
-                <li class=""><a href="/boutique">Boutique</a></li>
-                <li class=""><a href="http://blog.madeincheztoi.com/">Blog</a></li>
-                <li class=""><a href="/profile/">Mon espace</a></li>
+              <ul class="nav navbar-nav myNavbar">
+                <li class="active"><a href="/">ACCUEIL</a></li>
+                <li class=""><a class='navigate' href="/offres">OFFRES</a></li>
+                <li class=""><a href="/photos">PHOTOS</a></li>
+                <li class=""><a href="/livreor">LIVRE D'OR</a></li>
+                <li class=""><a href="/contact">CONTACT</a></li>
+                <li class=""><a href="/boutique">BOUTIQUE</a></li>
+                <li class=""><a href="http://blog.madeincheztoi.com/">BLOG</a></li>
+                <li class=""><a href="/profile/">MON ESPACE</a></li>
                 {% if is_granted('ROLE_ADMIN') %}
-                <li class=""><a href="/admin">Gestion</a></li>
+                <li class=""><a href="/admin">GESTION</a></li>
                 {% endif %}
-              </ul>
-            </div>
           </div>
         </nav>
       </div>
