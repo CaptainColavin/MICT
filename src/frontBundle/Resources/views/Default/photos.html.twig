@@ -1,24 +1,21 @@
 {% extends 'base.html.twig' %}
 {% block body %}
+<div class="panel-group" id="accordion">
+<div class="col-md-12 text-center" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1" style="font-size:18px">Les créations des membres</div>
+
+<div class="col-md-12 text-center" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2" style="font-size:18px">Ambiances</div>
+
+<div class="col-md-12 text-center" data-toggle="collapse" data-parent="#accordion" data-target="#collapse3" style="font-size:18px">Partenaires</div>
 
 
 <div class="container">
-<table>
-<tr>
-  <div class="panel-group" id="accordion">
-    
-   <td>
-   <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Les créations des membres</a>
-        </h4>
-      </div>
+    <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+
+<div class="panel-body"><div class="tz-gallery">
       <div id="collapse1" class="panel-collapse collapse in">
-        <div class="panel-body">
-    <div class="tz-gallery">
-
         <div class="row">
+          <h3>Les créations des membres :</h3>
             <div class="col-sm-3 col-md-2">
                 <a class="lightbox" href="{{ asset('images/MICT/photos/1.jpg') }}">
                     <img src="{{ asset('images/MICT/photos/thumbs/1.jpg') }}">
@@ -30,23 +27,14 @@
                 </a>
             </div>
         </div>
-    </div>
         </div>
-      </div>
-    </div>
-    </td>
-    <td>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Ambiances</a>
-        </h4>
-      </div>
+     
+
+
       <div id="collapse2" class="panel-collapse collapse">
-        <div class="panel-body">
-    <div class="tz-gallery">
 
         <div class="row">
+          <h3>Ambiances :</h3>
             <div class="col-sm-3 col-md-2">
                 <a class="lightbox" href="{{ asset('images/MICT/photos/1.jpg') }}">
                     <img src="{{ asset('images/MICT/photos/thumbs/1.jpg') }}">
@@ -57,25 +45,44 @@
                     <img src="{{ asset('images/MICT/photos/thumbs/2.jpg') }}">
                 </a>
             </div>
+                     <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/1.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/1.jpg') }}">
+                </a>
+            </div>
+            <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/2.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/2.jpg') }}">
+                </a>
+            </div>
+                     <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/1.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/1.jpg') }}">
+                </a>
+            </div>
+            <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/2.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/2.jpg') }}">
+                </a>
+            </div>
+                     <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/1.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/1.jpg') }}">
+                </a>
+            </div>
+            <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/2.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/2.jpg') }}">
+                </a>
+            </div>
         </div>
-    </div>
+      </div>
 
-        </div>
-      </div>
-    </div>
-    </td>
-    <td>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Partenaires</a>
-        </h4>
-      </div>
+     
       <div id="collapse3" class="panel-collapse collapse">
-        <div class="panel-body">
-        	    <div class="tz-gallery">
 
         <div class="row">
+          <h3>Partenaires :</h3>
             <div class="col-sm-3 col-md-2">
                 <a class="lightbox" href="{{ asset('images/MICT/photos/1.jpg') }}">
                     <img src="{{ asset('images/MICT/photos/thumbs/1.jpg') }}">
@@ -86,18 +93,45 @@
                     <img src="{{ asset('images/MICT/photos/thumbs/2.jpg') }}">
                 </a>
             </div>
-        </div>
-    </div>
-        	
+                       <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/1.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/1.jpg') }}">
+                </a>
+            </div>
+            <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/2.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/2.jpg') }}">
+                </a>
+            </div>
+                       <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/1.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/1.jpg') }}">
+                </a>
+            </div>
+            <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/2.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/2.jpg') }}">
+                </a>
+            </div>
+                       <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/1.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/1.jpg') }}">
+                </a>
+            </div>
+            <div class="col-sm-3 col-md-2">
+                <a class="lightbox" href="{{ asset('images/MICT/photos/2.jpg') }}">
+                    <img src="{{ asset('images/MICT/photos/thumbs/2.jpg') }}">
+                </a>
+            </div>
         </div>
       </div>
-    </div>
-    </td>
+   	
   </div>
-  
-</tr>
-</table>
-</div>
+ 
+  </div></div></div>
+
+
+
 <script>
     baguetteBox.run('.tz-gallery');
 </script>
