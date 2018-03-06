@@ -59,9 +59,9 @@ class Ateliers
     /**
      * @var int
      *
-     * @ORM\Column(name="NbPersonnesMax", type="integer", nullable=true)
+     * @ORM\Column(name="nbPersonnesMax", type="integer", nullable=true)
      */
-    private $NbPersonnesMax;
+    private $nbPersonnesMax;
 
     /**
      * Get id
@@ -169,13 +169,13 @@ class Ateliers
         return $this->date;
     }
     /**
-     * Set NbPersonnesMax
+     * Set nbPersonnesMax
      *
-     * @param integer $NbPersonnesMax
+     * @param integer $nbPersonnesMax
      *
      * @return Ateliers
      */
-    public function setNbPersonnesMax($NbPersonnesMax)
+    public function setNbPersonnesMax($nbPersonnesMax)
     {
         $this->nbPersonnesMax = $nbPersonnesMax;
 
@@ -183,7 +183,7 @@ class Ateliers
     }
 
     /**
-     * Get NbPersonnesMax
+     * Get nbPersonnesMax
      *
      * @return int
      */

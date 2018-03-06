@@ -31,13 +31,13 @@ class DefaultController extends Controller
         return $this->render('frontBundle:Default:photos.html.twig');
     }
 
-    /**
-     * @Route("/livredor")
-     */
-    public function book()
-    {   
-        return $this->render('frontBundle:Default:goldenbook.html.twig');
-    }
+    // /**
+    //  * @Route("/livredor")
+    //  */
+    // public function book()
+    // {   
+    //     return $this->render('frontBundle:Default:goldenbook.html.twig');
+    // }
 
     /**
      * @Route("/contact")
