@@ -259,6 +259,24 @@ h2{
     cursor: pointer;
 }
 
+.dot {
+  height: 18px;
+  width: 18px;
+  background-color: #e6e6e6;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.dotActive {
+  height: 18px;
+  width: 18px;
+  background-color: #bfbfbf;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
 @media(max-width: 768px) {
     body {
         padding: 0;
