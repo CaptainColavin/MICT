@@ -1,0 +1,52 @@
+<div id="ModalReservationPerso" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+        <form action="#" method="post">
+            <h1>Contact</h1>
+              
+              <label for="nom">Nom : </label>
+              <input type="text" id="nom" required> <br>  
+              <label for="prenom">Prenom : </label>
+              <input type="text" id="prenom" required> <br>
+              <label for="mail">Mail : </label>
+              <input type="email" id="mail" required> <br>
+              <label for="tel">Numero de Téléphone : </label>
+              <input type="tel" id="tel" placeholder="(optionnel)"> <br>
+              <label for="ville">Ville : </label>
+              <input type="text" id="ville"> <br>
+              <p>
+                <input type="radio" name="my-radio" value="choix1" id="choix1">
+                <label for="text">Je veux héberger un atelier chez moi !</label>
+                <input type="radio" name="my-radio" value="choix2" id="choix2">
+                <label for="text">Je veux rejoindre un atelier existant.</label>
+                <input type="radio" name="my-radio" value="choix3" id="choix3">
+                <label for="text">Je veux avoir des cours particuliers !</label>
+              </p>
+
+              <label for="message">Votre message: </label>
+              <textarea id="message" rows="10" cols="80" placeholder="Des précisions à apporter ?"></textarea><br>
+              <button type="submit" name="button"> ENVOYER</button> <p>* champs obligatoire</p>
+          </form>
+    </div>
+  </div>
+    <script>
+    var modal = document.getElementById('ModalReservationPerso');
+
+    var btn = document.getElementById("showModal");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>

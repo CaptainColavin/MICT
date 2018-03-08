@@ -1,0 +1,317 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container" style="background-color:rgba(255, 255, 255, 0.7); text-align:center; ">
+
+<div class="col-md-9">
+    <div class="col-md-12">
+        <h2 style="color: #a700ab">Choisis le thême de ton atelier !</h2>
+
+        <p style="text-align: left;">Clique sur chaque thème pour découvrir ses secrets :
+            projets proposés, exempl3s de réalisations,
+            niveaux de difficulté, et réserve celui qui te plaît le plus !
+            Tu retrouveras certains projets dans plusieurs catégories.
+            Par exemple les vide-poches sont à la fois des accessoires pour chez toi et des projets initiation !</p>
+    </div>
+
+    <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+        <div class="col-md-3">
+          <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
+          <button type="button" class="darkBlueButton" style="margin-bottom: 5px;" id="showModal">Achat rapide</button><br/>
+          <button type="button" class="lightBlueButton">Achat presonnalisé</button>
+        </div>
+        <div class="col-md-9">
+          <p style="font-weight: bold;">Initiation à la couture</p>
+          <p>Ça y est, tu te lances ! C'est le grand jour !</p>
+          <p>Droit fil, entoilage, enfilage, surpiqûre... Tout va bientôt s'éclairer pour toi !</p>
+          <p>L'atelier initiation est l'endroit idéal pour bien commencer la couture en toute confiance et sans prendre de risques.
+              Aucun problème si tu n'as jamais touché à une machine à coudre de ta vie, c'est justement l'endroit !
+              Et comme pour les autres ateliers, ceux qui sont plus avancés pourront s'exercer avec des options et finitions plus complexes.</p>
+          <p>Alors, qu'est-ce qui te tente le plus pour ta première réalisation ?</p>
+        </div>
+      </div>
+
+
+    <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+        <div class="col-md-3">
+          <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
+          <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
+          <button type="button" class="lightBlueButton">Achat presonnalisé</button>
+        </div>
+        <div class="col-md-9">
+          <p style="font-weight: bold;">Vêtements Bébé</p>
+          <p>Que tu attendes ton petit bout, qu'il soit déjà là à gazouiller auprès de toi,
+             ou bien que ce soit pour tes copines jeunes maman, réalise plein de petits vêtements douillets et adaptés à tous les âges, de la naissance à 3 ans !</p>
+          <p>Quoi de plus mignon qu'une robe en taille 3 mois ? On craque tous, non ? :)
+             Apprendre à coudre, c'est pouvoir créer pour chaque âge, rallonger, relooker et au final moins faire chauffer sa CB...</p>
+        </div>
+      </div>
+
+    <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+        <div class="col-md-3">
+          <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
+          <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
+          <button type="button" class="lightBlueButton">Achat presonnalisé</button>
+        </div>
+        <div class="col-md-9">
+          <p style="font-weight: bold;">Vêtements Enfant</p>
+          <p>Ahh, les enfants. Tour à tour charmeurs ou terribles...
+              Une chose est sûre : ils poussent vite ! Et ils foncent... Le challenge est de faire à la fois solide, confortable, évolutif... et joli !</p>
+          <p>Ça tombe bien ! Tu trouveras ici plein de modèles qui répondent à ces critères.
+              Tes petits auront les habits que tu leur imagines, beaux, originaux, sans oublier les customisations qu'ils adooorent !
+              Cerise sur le gâteau, tu apprendras plein d'astuces pour qu'ils les portent plus longtemps !</p>
+        </div>
+      </div>
+
+    <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+        <div class="col-md-3">
+          <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
+          <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
+          <button type="button" class="lightBlueButton">Achat presonnalisé</button>
+        </div>
+        <div class="col-md-9">
+          <p style="font-weight: bold;">Accessoires Bébé / Enfant</p>
+          <p>Les accessoires pour les enfants sont une source inépuisable d'inspiration pour le couturier ou la couturière en herbe.</p>
+          <p>Les sujets sont tellement variés : accessoires à porter, objets de la vie courante, cadeaux...
+             Ils répondent à des besoins précis (bavoirs, tapis d'éveil, sac à langer ou tapis de change, siège bébé en balade...) et,
+             encore plus que pour les vêtements, tu peux donner libre cours à ton imagination !</p>
+          <p>Si tu as une idée spécifique ou un besoin précis, n'hésite pas à m'en faire part, on trouvera un moyen pour que ton projet se réalise.</p>
+        </div>
+      </div>
+
+    <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+        <div class="col-md-3">
+          <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
+          <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
+          <button type="button" class="lightBlueButton">Achat presonnalisé</button>
+        </div>
+        <div class="col-md-9">
+          <p style="font-weight: bold;">Vêtements Femme</p>
+          <p>Tu ne peux plus fermer tes armoires, et pourtant, tu n'as rien à te mettre ? C'est parce que tu n'as pas encore *tes* vêtements !</p>
+          <p>Les projets indiqués ci-dessous proposent des bases de vêtements, sur lesquels il est possible d'appliquer des variantes :
+             types d'encolures, de manches, ajout de poches, fronces, plis... Le tout adapté à ton niveau, bien sûr !</p>
+          <p>Les modèles cousus en atelier sont basés sur des tailles standard. À quelques exceptions près, pour des raisons de temps et d'organisation,
+              il n'est pas possible de faire du sur-mesure en atelier collectif. Pour travailler le patronage et le sur-mesure, visite le thème Techniques de couture.</p>
+          <p>Enfin, certains projets peuvent être longs à réaliser. Dans ce cas, il se peut que le vêtement ne soit pas fini à la fin de l'atelier. Si tu as une machine à coudre personnelle,
+              et si tu souhaites finir ton projet de ton côté, tu auras toutes les indications utiles pour finir ta réalisation. Sinon, un second atelier sera nécessaire.</p>
+        </div>
+      </div>
+
+    <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+        <div class="col-md-3">
+          <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
+          <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
+          <button type="button" class="lightBlueButton">Achat presonnalisé</button>
+        </div>
+        <div class="col-md-9">
+          <p style="font-weight: bold;">Vêtements Homme</p>
+          <p>Les grands oubliés traditionnels des couturières amatrices !</p>
+          <p>Il faut dire que, souvent, ces projets sont plus classiques - donc techniques.
+              Ils peuvent nécessiter plusieurs ateliers pour les réaliser (voir l'explication du thème Vêtements femme).</p>
+        </div>
+      </div>
+
+      <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+          <div class="col-md-3">
+            <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
+            <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
+            <button type="button" class="lightBlueButton">Achat presonnalisé</button>
+          </div>
+          <div class="col-md-9">
+            <p style="font-weight: bold;">Pour chez toi</p>
+            <p>La couture, ce n'est pas que pour les vêtements... Mais ça, tu le savais déjà !</p>
+            <p>C'est aussi une importante source d'économies.
+                Est-ce que tu connais le prix d'une housse de tablette ? D'une panière en tissu ? D'un sac à tarte ? Quelques coutures droites et hop !
+                Le tout, c'est d'apprendre à le faire. Tu couds aussi des accessoires et des objets déco assortis à ton intérieur. Génial pour une pendaison de crémaillère, non ?</p>
+            <p>Et puis pourquoi ne pas glisser quelques unes de tes réalisations au pied du sapin l'hiver prochain ? ;)</p>
+          </div>
+        </div>
+
+        <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+            <div class="col-md-3">
+              <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
+              <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
+              <button type="button" class="lightBlueButton">Achat presonnalisé</button>
+            </div>
+            <div class="col-md-9">
+              <p style="font-weight: bold;">Recyclage et Détournement</p>
+              <p>Les grands oubliés traditionnels des couturières amatrices !</p>
+              <p>Il faut dire que, souvent, ces projets sont plus classiques - donc techniques.
+                  Ils peuvent nécessiter plusieurs ateliers pour les réaliser (voir l'explication du thème Vêtements femme).</p>
+            </div>
+          </div>
+
+          <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+              <div class="col-md-3">
+                <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
+                <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
+                <button type="button" class="lightBlueButton">Achat presonnalisé</button>
+              </div>
+              <div class="col-md-9">
+                <p style="font-weight: bold;">Techniques de couture</p>
+                <p>Les grands oubliés traditionnels des couturières amatrices !</p>
+                <p>Il faut dire que, souvent, ces projets sont plus classiques - donc techniques.
+                    Ils peuvent nécessiter plusieurs ateliers pour les réaliser (voir l'explication du thème Vêtements femme).</p>
+              </div>
+            </div>
+
+            <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+                <div class="col-md-3">
+                  <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
+                  <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
+                  <button type="button" class="lightBlueButton">Achat presonnalisé</button>
+                </div>
+                <div class="col-md-9">
+                  <p style="font-weight: bold;">Ateliers évênement</p>
+                  <p>Les grands oubliés traditionnels des couturières amatrices !</p>
+                  <p>Il faut dire que, souvent, ces projets sont plus classiques - donc techniques.
+                      Ils peuvent nécessiter plusieurs ateliers pour les réaliser (voir l'explication du thème Vêtements femme).</p>
+                </div>
+              </div>
+
+              <div class="col-md-12 purpleBorderContainer" style="text-align: left;">
+                  <div class="col-md-3">
+                    <img height="100px" width="100px" style="background-color: grey; margin-bottom: 10px;"/><br/>
+                    <button type="button" class="darkBlueButton" style="margin-bottom: 5px;">Achat rapide</button><br/>
+                    <button type="button" class="lightBlueButton">Achat presonnalisé</button>
+                  </div>
+                  <div class="col-md-9">
+                    <p style="font-weight: bold;">Sacs, chapeaux et accessoires</p>
+                    <p>Les grands oubliés traditionnels des couturières amatrices !</p>
+                    <p>Il faut dire que, souvent, ces projets sont plus classiques - donc techniques.
+                        Ils peuvent nécessiter plusieurs ateliers pour les réaliser (voir l'explication du thème Vêtements femme).</p>
+                  </div>
+                </div>
+          </div>
+
+  <div class="col-md-3" style="text-align: left">
+      <h4 style="text-align: center; margin-top:80px;">Made in...</h4>
+
+      <div class="purpleBorderContainerSide">
+            <h4 style="color: #a700ab; text-align: center">...Chez les autres</h4>
+            <p>Tu es seul(e), et tu veux rejoindre un atelier déjà organisé par quelqu'un d'autre ?</p>
+            <p>Tu as envie de rencontrer du monde en passant des moments sympas, tout en apprenant quelque chose d'utile ?</p>
+            <p>Tu as envie de participer à un atelier sans avoir à l'organiser ?</p>
+            <p>Alors rejoins un atelier déjà planifié, s'il est ouvert au public et s'il y reste des places !</p>
+            <hr>
+            <p>Les prochains ateliers couture Made in chez toi pour lesquels il reste des places :</p>
+            <p style="text-align: center">Mercredi 12 octobre 13h - 16h Paris 17° Atelier sac Tamagushi</p>
+            <div style="width: auto">
+                <button type="button" class="darkBlueButton" style="margin:0 40px 0 40px">Je rejoins cet atelier</button>
+            </div>
+      </div>
+
+      <div class="purpleBorderContainerSide">
+          <h4 style="color: #a700ab; text-align: center">...Chez toi</h4>
+          <p>C'est décidé, tu veux un atelier chez toi !</p>
+          <p>Il ne te reste plus qu'à réserver en cliquant sur le bouton ci-dessous...</p>
+          <p>À très bientôt, chez toi !</p>
+          <button type="button" class="darkBlueButton" style="margin:0 75px 0 75px">Je réserve</button>
+      </div>
+
+      <div class="purpleBorderContainerSide">
+          <h4 style="color: #a700ab; text-align: center">...En ville</h4>
+          <p>Retrouve Made in chez toi lors de ses prochains événements !</p>
+          <hr>
+          <p style="text-align: center">24 septembre 2016 de 10h à 19h Mondial Tissus Montigny les Cormeilles</p>
+          <p style="text-align: center">Viens rencontrer Made in chez toi et discuter de tes envies couture pendant cette journée de démonstration !</p>
+          <button type="button" class="darkBlueButton" style="margin:0 75px 0 75px">Je réserve</button>
+      </div>
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title">Initiation à la couture</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="coordinate">
+
+            <div class="centered">
+                <h4>Vos Coordonnées</h4>
+            </div>
+
+            <div class="centered">
+                <span class="dotActive"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" id="nom" placeholder="Votre nom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Votre email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="adresse">Adresse de livraison</label>
+                <input type="text" name="adresse" id="adresse" placeholder="Votre adresse" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tel">Téléphone</label>
+                <input type="text" name="tel" id="tel" placeholder="Votre numéro de téléphone fix">
+            </div>
+
+            <div class="form-group">
+                <label for="tel_mobile">Téléphone mobile</label>
+                <input type="text" name="tel_mobile" id="tel_mobile" placeholder="Votre numéro de téléphone mobile">
+            </div>
+
+        </div>
+        <div class="modal-body" id="banque">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-body" id="final">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="nextTo2">Suivant</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+        </div>
+  </div>
+</div>
+
+<script>
+    // $('#coordinate').hide();
+    $('#banque').hide();
+    $('#final').hide();
+
+    var modal = document.getElementById('myModal');
+
+    var btn = document.getElementById("showModal");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    $('#nextTo2').onclick = function() {
+        $('#coordinate').hide();
+        $('#banque').show();
+        document.getElementById("nextTo2").id = "nextTo3";
+    }
+</script>
+{% endblock %}

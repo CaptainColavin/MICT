@@ -52,6 +52,16 @@ class DefaultController extends Controller
      */
     public function shop()
     {
-        return $this->render('frontBundle:Default:boutique.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $articles = $em->getRepository('BackBundle:Article')->findBy(
+            array(),
+            array('id' =>'desc'),
+            5,
+            0);
+        return $this->render('frontBundle:Default:boutique.html.twig', array(
+            'articles' => $articles,
+        ));
+        
     }
 }

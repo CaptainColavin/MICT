@@ -1,0 +1,52 @@
+<div id="ModalContactEtCE" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+        <form action="#" method="post">
+            <h1>Contact</h1>
+              
+              <label for="nom">Nom : </label>
+              <input type="text" id="nom" required> <br>  
+              <label for="prenom">Prenom : </label>
+              <input type="text" id="prenom" required> <br>
+              <label for="mail">Mail : </label>
+              <input type="email" id="mail" required> <br>
+              <label for="tel">Numero de Téléphone : </label>
+              <input type="tel" id="tel"> <br>
+              <label for="ville">Ville : </label>
+              <input type="text" id="ville"> <br>
+              <p>
+                <input type="radio" name="my-radio" value="choix1" id="choix1">
+                <label for="text">Je désire en savoir plus sur Made in chez toi..</label>
+                <input type="radio" name="my-radio" value="choix2" id="choix2">
+                <label for="text">Je suis intéressé par l'offre CE</label>
+                <input type="radio" name="my-radio" value="choix3" id="choix3">
+                <label for="text">Je souhaite un devis pour une prestation sur-mesure</label>
+              </p>
+
+              <label for="message">Votre message: </label>
+              <textarea id="message" rows="10" cols="80" placeholder="Mon message ou ma question..."></textarea><br>
+              <button type="submit" name="button"> ENVOYER</button> <p>* champs obligatoire</p>
+          </form>
+    </div>
+  </div>
+  <script>
+    var modal = document.getElementById('ModalContactEtCE');
+
+    var btn = document.getElementById("showModal");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
